@@ -8,7 +8,7 @@
 
 | Integrante | Rol Principal | Responsabilidades en el Proyecto |
 | :--- | :--- | :--- |
-| **Yazir Antonio Balam Flores** *(Líder)*<br>GitHub: `Yazir-BF` | **Conexión de API & Manejo de Errores** | • Arquitectura de conexión asíncrona con `fetch()`.<br>• Manejo de promesas (`async/await`) y endpoints de la API.<br>• Detección y manejo del error HTTP **404** (personaje no encontrado) y errores de red en el bloque `try/catch`.<br>• Coordinación general del repositorio y despliegue en GitHub Pages. |
+| **Yazir Antonio Balam Flores** *(Líder)*<br>GitHub: `yazirbalam14-commits` | **Conexión de API & Manejo de Errores** | • Arquitectura de conexión asíncrona con `fetch()`.<br>• Manejo de promesas (`async/await`) y endpoints de la API.<br>• Detección y manejo del error HTTP **404** (personaje no encontrado) y errores de red en el bloque `try/catch`.<br>• Coordinación general del repositorio y despliegue en GitHub Pages. |
 | **Yadier de Jesús Pech Tun** | **Estructura & Semántica HTML5** | • Maquetación semántica del archivo `index.html` (`<header>`, `<main>`, `<section>`, `<aside>`, `<footer>`).<br>• Estructura accesible para campos de búsqueda, filtros y cuadrícula de tarjetas.<br>• Creación del contenedor de feedback visual y drawer móvil de favoritos. |
 | **Iván Alí Rodríguez Arceo** | **Diseño Frontend, CSS & Modo Oscuro** | • Estilos visuales puros en `style.css` con estética temática de Rick & Morty.<br>• Implementación de CSS Grid y Flexbox responsive (adaptable a celulares y computadoras).<br>• **Reto de Modificación:** Diseño de variables de color (`:root` y `[data-theme="light"]`) para alternar fluidamente entre Modo Oscuro y Modo Claro. |
 | **Joan Alexis Sansores Anguas** | **Búsqueda, Filtros & LocalStorage** | • Lógica del buscador en tiempo real con temporizador (*debounce*) para optimizar peticiones.<br>• Lógica de filtros combinados por estado (*Alive, Dead, Unknown*) y especie.<br>• Implementación del sistema de **Favoritos** persistente con `localStorage` (agregar, quitar y sincronizar tarjetas). |
@@ -16,8 +16,8 @@
 ---
 
 ## 🌐 Enlaces del Proyecto
-- **Repositorio en GitHub:** [https://github.com/Yazir-BF/proyecto-web-ia](https://github.com/Yazir-BF/proyecto-web-ia)
-- **Aplicación en Vivo (GitHub Pages):** [https://Yazir-BF.github.io/proyecto-web-ia/](https://Yazir-BF.github.io/proyecto-web-ia/)
+- **Repositorio en GitHub:** [https://github.com/yazirbalam14-commits/proyecto-web-ia](https://github.com/yazirbalam14-commits/proyecto-web-ia)
+- **Aplicación en Vivo (GitHub Pages):** [https://yazirbalam14-commits.github.io/proyecto-web-ia/](https://yazirbalam14-commits.github.io/proyecto-web-ia/)
 
 ---
 
