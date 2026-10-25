@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rick & Morty - Explorador Interactivo</title>
+  <meta name="description" content="Explorador interactivo de personajes de Rick and Morty con búsqueda, filtros, favoritos y modo oscuro.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Encabezado Principal -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo-group">
+        <span class="portal-icon">🌀</span>
+        <div>
+          <h1 class="logo-title">Rick & Morty Explorer</h1>
+          <p class="logo-subtitle">Explora los personajes del multiverso</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <!-- Botón para ver favoritos en móviles -->
+        <button id="toggle-favs-drawer-btn" class="btn btn-secondary fav-toggle-mobile" aria-label="Abrir favoritos">
+          ⭐ Favoritos (<span id="fav-counter-badge">0</span>)
+        </button>
+        <!-- Reto: Alternador Modo Oscuro / Claro -->
+        <button id="theme-toggle-btn" class="btn btn-theme" aria-label="Cambiar tema">
+          <span id="theme-icon">☀️</span>
+          <span id="theme-text">Modo Claro</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenedor Principal -->
+  <div class="app-layout">
+    <main class="main-content">
+      <!-- Barra de Filtros y Búsqueda -->
+      <section class="controls-section" aria-label="Controles de búsqueda y filtrado">
+        <div class="controls-card">
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input 
+              type="text" 
+              id="search-input" 
+              placeholder="Buscar personaje por nombre (ej. Rick, Morty, Summer)..."
+              autocomplete="off"
+            >
+            <button id="clear-search-btn" class="btn-clear" title="Limpiar búsqueda" style="display: none;">✕</button>
+          </div>
+
+          <div class="filters-row">
+            <div class="select-group">
+              <label for="status-filter">Estado:</label>
+              <select id="status-filter">
+                <option value="">Todos los estados</option>
+                <option value="alive">Vivo (Alive)</option>
+                <option value="dead">Muerto (Dead)</option>
+                <option value="unknown">Desconocido (Unknown)</option>
+              </select>
+            </div>
+
+            <div class="select-group">
+              <label for="species-filter">Especie:</label>
+              <select id="species-filter">
+                <option value="">Todas las especies</option>
+                <option value="Human">Humano</option>
+                <option value="Alien">Alienígena</option>
+                <option value="Humanoid">Humanoide</option>
+                <option value="Robot">Robot</option>
+                <option value="Poopybutthole">Poopybutthole</option>
+                <option value="Mythological Creature">Criatura Mitológica</option>
+                <option value="Animal">Animal</option>
+              </select>
+            </div>
+
+            <button id="reset-filters-btn" class="btn btn-outline">Restablecer</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mensajes de estado (Carga, Errores y Vacío) -->
+      <section id="feedback-container" class="feedback-container" style="display: none;" aria-live="polite">
+        <!-- Se inserta dinámicamente -->
+      </section>
+
+      <!-- Resumen de resultados -->
+      <div id="results-summary" class="results-summary">
+        <span id="results-count">Cargando personajes...</span>
+      </div>
+
+      <!-- Cuadrícula Principal de Tarjetas -->
+      <section class="characters-section">
+        <div id="characters-grid" class="characters-grid">
+          <!-- Tarjetas renderizadas con JavaScript -->
+        </div>
+      </section>
+
+      <!-- Paginación -->
+      <div id="pagination-controls" class="pagination-controls" style="display: none;">
+        <button id="prev-page-btn" class="btn btn-outline" disabled>← Anterior</button>
+        <span id="page-indicator" class="page-indicator">Página 1</span>
+        <button id="next-page-btn" class="btn btn-outline">Siguiente →</button>
+      </div>
+    </main>
+
+    <!-- Barra lateral / Sección de Favoritos -->
+    <aside id="favorites-aside" class="favorites-sidebar">
+      <div class="favorites-header">
+        <div class="fav-title-wrap">
+          <span class="fav-icon">⭐</span>
+          <h2>Mis Favoritos</h2>
+        </div>
+        <span id="fav-count-pill" class="pill-count">0</span>
+        <button id="close-favs-drawer-btn" class="btn-close-mobile" aria-label="Cerrar favoritos">✕</button>
+      </div>
+      <p class="favorites-desc">Tus personajes guardados en este navegador.</p>
+      
+      <div id="favorites-list" class="favorites-list">
+        <!-- Personajes favoritos renderizados por JS -->
+      </div>
+
+      <div class="favorites-footer" id="favorites-footer" style="display: none;">
+        <button id="clear-all-favs-btn" class="btn btn-danger-outline">Vaciar Favoritos</button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <p>Proyecto Web con Rick and Morty API • Desarrollado con HTML5, CSS puro y JavaScript Vanilla.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
