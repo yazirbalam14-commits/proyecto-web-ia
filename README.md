@@ -145,7 +145,7 @@ Utilizamos la asistencia de Claude Pro / ChatGPT Plus directamente desde el nave
 - Todo el reto del Modo Oscuro/Claro con variables CSS dinámicas y almacenamiento en `localStorage`.
 
 ### 6. ¿Cómo publicaron su aplicación mediante GitHub Pages? *(Especialidad: Yadier Pech / Yazir Balam)*
-Subimos los 4 archivos al repositorio público en GitHub. Luego fuimos a **Settings > Pages**, seleccionamos la rama `main` en la carpeta `/ (root)` y guardamos. GitHub ejecutó un flujo de despliegue automatizado que sirvió los archivos estáticos bajo un certificado HTTPS en `https://Yazir-BF.github.io/proyecto-web-ia/`.
+Subimos los 4 archivos al repositorio público en GitHub. Luego fuimos a **Settings > Pages**, seleccionamos la rama `main` en la carpeta `/ (root)` y guardamos. GitHub ejecutó un flujo de despliegue automatizado que sirvió los archivos estáticos bajo un certificado HTTPS en `https://yazirbalam14-commits.github.io/proyecto-web-ia/`.
 
 ---
 
