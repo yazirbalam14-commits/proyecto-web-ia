@@ -8,7 +8,7 @@
 
 | Integrante | Rol Principal | Responsabilidades en el Proyecto |
 | :--- | :--- | :--- |
-| **Yazir Antonio Balam Flores** *(Líder)*<br>GitHub: `yazirbalam14-commits` | **Conexión de API & Manejo de Errores** | • Arquitectura de conexión asíncrona con `fetch()`.<br>• Manejo de promesas (`async/await`) y endpoints de la API.<br>• Detección y manejo del error HTTP **404** (personaje no encontrado) y errores de red en el bloque `try/catch`.<br>• Coordinación general del repositorio y despliegue en GitHub Pages. |
+| **Yazir Antonio Balam Flores**<br>GitHub: `yazirbalam14-commits` | **Conexión de API & Manejo de Errores** | • Arquitectura de conexión asíncrona con `fetch()`.<br>• Manejo de promesas (`async/await`) y endpoints de la API.<br>• Detección y manejo del error HTTP **404** (personaje no encontrado) y errores de red en el bloque `try/catch`.<br>• Coordinación general del repositorio y despliegue en GitHub Pages. |
 | **Yadier de Jesús Pech Tun** | **Estructura & Semántica HTML5** | • Maquetación semántica del archivo `index.html` (`<header>`, `<main>`, `<section>`, `<aside>`, `<footer>`).<br>• Estructura accesible para campos de búsqueda, filtros y cuadrícula de tarjetas.<br>• Creación del contenedor de feedback visual y drawer móvil de favoritos. |
 | **Iván Alí Rodríguez Arceo** | **Diseño Frontend, CSS & Modo Oscuro** | • Estilos visuales puros en `style.css` con estética temática de Rick & Morty.<br>• Implementación de CSS Grid y Flexbox responsive (adaptable a celulares y computadoras).<br>• **Reto de Modificación:** Diseño de variables de color (`:root` y `[data-theme="light"]`) para alternar fluidamente entre Modo Oscuro y Modo Claro. |
 | **Joan Alexis Sansores Anguas** | **Búsqueda, Filtros & LocalStorage** | • Lógica del buscador en tiempo real con temporizador (*debounce*) para optimizar peticiones.<br>• Lógica de filtros combinados por estado (*Alive, Dead, Unknown*) y especie.<br>• Implementación del sistema de **Favoritos** persistente con `localStorage` (agregar, quitar y sincronizar tarjetas). |
@@ -58,7 +58,7 @@ En estricto cumplimiento con las normas establecidas para el desarrollo:
      - **Source:** `Deploy from a branch`.
      - **Branch:** `main` (o `master`) y directorio `/ (root)`.
      - Haz clic en el botón **Save**.
-   - Espera de 1 a 2 minutos. En la parte superior de la sección Pages aparecerá el enlace activo: `https://Yazir-BF.github.io/proyecto-web-ia/`.
+   - Espera de 1 a 2 minutos. En la parte superior de la sección Pages aparecerá el enlace activo: `https://yazirbalam14-commits.github.io/proyecto-web-ia/`.
 
 ---
 
@@ -74,6 +74,9 @@ En estricto cumplimiento con las normas establecidas para el desarrollo:
 
 - **Prompt 3 (Favoritos y LocalStorage - Joan Sansores Anguas):**
   > *"Implementa la sección de favoritos. Cada tarjeta de personaje debe tener un botón interactivo. Al presionarlo, el objeto del personaje debe guardarse en un array utilizando `localStorage` y renderizarse en la sección de favoritos. Al recargar la pestaña del navegador, la lista de favoritos debe recuperarse del `localStorage` y mostrarse intacta."*
+
+- **Prompt 4 (Rediseño UI/UX Corporativo & Modo Oscuro - Iván Rodríguez Arceo):**
+  > *"Actúa como un diseñador UI/UX y desarrollador Front-end Senior. Necesito que reescribas el archivo style.css y ajustes la estructura de index.html para que nuestro explorador de personajes de Rick and Morty deje de verse como una página infantil de caricaturas y adquiera un aspecto premium, serio, institucional y altamente profesional, similar a una base de datos científica o un directorio corporativo moderno. Implementa un sistema de variables CSS (:root) con paleta corporativa: Modo Claro por defecto (#FAF5EB, #2C2C2C, #1E3F20, #D49B2A) y Modo Oscuro (.dark-theme / #0B1D0F, #FAF5EB, #1A331E, #E3A813), tipografía Inter geométrica, tarjetas minimalistas con sombras suaves y transiciones fluidas."*
 
 ---
 

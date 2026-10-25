@@ -21,7 +21,7 @@ const state = {
   statusFilter: '',
   speciesFilter: '',
   favorites: JSON.parse(localStorage.getItem('rm_favorites')) || [],
-  theme: localStorage.getItem('rm_theme') || 'dark'
+  theme: localStorage.getItem('rm_theme') || 'light'
 };
 
 // ============================================================================
@@ -83,6 +83,8 @@ function initTheme() {
 function applyTheme(theme) {
   state.theme = theme;
   document.documentElement.setAttribute('data-theme', theme);
+  document.body.classList.toggle('dark-theme', theme === 'dark');
+  document.body.classList.toggle('light-theme', theme === 'light');
   localStorage.setItem('rm_theme', theme);
 
   if (theme === 'dark') {
@@ -337,8 +339,8 @@ function showLoadingFeedback() {
 
   dom.feedbackContainer.innerHTML = `
     <div class="spinner"></div>
-    <h3 class="feedback-title">Cargando personajes...</h3>
-    <p class="feedback-message">Sintonizando la frecuencia interdimensional de la API.</p>
+    <h3 class="feedback-title">Consultando base de datos multiversal...</h3>
+    <p class="feedback-message">Estableciendo comunicación asíncrona con el registro central de entidades.</p>
   `;
 }
 
@@ -349,9 +351,9 @@ function handleNoResults() {
   dom.feedbackContainer.style.display = 'block';
 
   dom.feedbackContainer.innerHTML = `
-    <span class="feedback-icon">🔎</span>
+    <span class="feedback-icon">⌕</span>
     <h3 class="feedback-title">No se encontraron resultados</h3>
-    <p class="feedback-message">No pudimos encontrar ningún personaje que coincida con tus criterios de búsqueda o filtros.</p>
+    <p class="feedback-message">No existen registros que coincidan con los criterios de búsqueda o filtrado ingresados en el sistema.</p>
     <button id="feedback-reset-btn" class="btn btn-outline">Restablecer filtros</button>
   `;
 
@@ -366,10 +368,10 @@ function handleNetworkError(errorMsg) {
 
   dom.feedbackContainer.innerHTML = `
     <span class="feedback-icon">⚠️</span>
-    <h3 class="feedback-title">Error de conexión con la API</h3>
+    <h3 class="feedback-title">Error de comunicación con la API</h3>
     <p class="feedback-message">
-      Ocurrió un problema al obtener los datos: <strong>${errorMsg || 'Falla de red'}</strong>.<br>
-      Verifica tu conexión a internet o intenta nuevamente en unos momentos.
+      No fue posible establecer conexión con el servicio externo (${errorMsg || 'Falla de red'}).<br>
+      Verifique la conectividad a internet de su equipo e intente nuevamente.
     </p>
     <button id="feedback-retry-btn" class="btn btn-outline">Reintentar conexión</button>
   `;
