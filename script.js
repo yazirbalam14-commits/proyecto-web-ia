@@ -1,6 +1,6 @@
 /**
  * Rick & Morty Explorer - script.js
- * Cumple con todos los requisitos de la Tarea 3:
+ * Funcionalidades principales:
  * 1. Conexión fetch() a la API de Rick and Morty.
  * 2. Manejo de errores visuales y status 404 (sin resultados).
  * 3. Búsqueda por nombre y filtros por estado y especie.

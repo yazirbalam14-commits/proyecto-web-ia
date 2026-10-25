@@ -1,3 +1,4 @@
-# Archivos locales de la tarea
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
 *.pdf
-.vscode/

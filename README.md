@@ -21,6 +21,15 @@
 
 ---
 
+## 🛠️ Herramientas Utilizadas y Entorno de Desarrollo
+En estricto cumplimiento con las normas establecidas para el desarrollo:
+- **Plataforma y Editor:** Exclusivamente la interfaz y editor web de **GitHub** ([https://github.com](https://github.com)).
+- **Inteligencia Artificial:** Asistencia técnica y formulación de prompts mediante **Claude Pro** (Anthropic) y **ChatGPT Plus** (OpenAI).
+- **Pruebas y Ejecución:** Navegador web estándar para depuración en vivo e inspección del DOM.
+- **Sin herramientas externas:** No se utilizaron editores de escritorio instalados ni plataformas de creación automática de sitios web.
+
+---
+
 ## 📋 Descripción de la Aplicación
 **Rick & Morty Explorer** es un explorador interactivo desarrollado para la materia de desarrollo web. Permite a los usuarios consultar y explorar personajes de la serie utilizando la API pública [https://rickandmortyapi.com/api/character](https://rickandmortyapi.com/api/character).
 
@@ -53,7 +62,7 @@
 
 ---
 
-## 🤖 Sección Obligatoria de Inteligencia Artificial
+## 🤖 Sección Obligatoria de Inteligencia Artificial (Claude / ChatGPT)
 
 ### 1. Tres Prompts Clave Utilizados en el Desarrollo
 
@@ -104,7 +113,7 @@ Esto permitió que la interfaz responda amigablemente sin romper la ejecución d
 ---
 
 ### 5. Reflexión sobre qué Aprendimos Utilizando IA
-A través de este proyecto aprendimos que la Inteligencia Artificial es un multiplicador de productividad muy valioso para estructurar proyectos web rápidamente y aprender conceptos técnicos. Sin embargo, requiere supervisión constante:
+A través de este proyecto aprendimos que la Inteligencia Artificial (Claude / ChatGPT) es un multiplicador de productividad muy valioso para estructurar proyectos web rápidamente y aprender conceptos técnicos. Sin embargo, requiere supervisión constante:
 - La IA puede producir soluciones genéricas que no contemplan casos límite (como el error 404 de una API o la sincronización de estado de la interfaz).
 - Es indispensable comprender la lógica subyacente de cada función (`fetch`, eventos del DOM, promesas asíncronas) para poder auditar el código, corregirlo y defenderlo con criterio profesional.
 
@@ -129,14 +138,14 @@ El buscador escucha el evento `input` en el campo de texto. Incorpora un tempori
 Si la API no responde por caída del servidor o si el usuario pierde su conexión a internet, la promesa de `fetch()` es rechazada y el control pasa al bloque `catch (error)`. En lugar de que la aplicación quede bloqueada o silenciosa, la función `handleNetworkError()` despliega en pantalla un panel visual con un icono de advertencia, el motivo del fallo y un botón interactivo para *"Reintentar conexión"*.
 
 ### 5. ¿Qué parte del código fue generada por la IA y qué modificaciones realizaron ustedes? *(Especialidad: Iván Rodríguez)*
-La IA nos proporcionó la base inicial del HTML y la conexión básica de `fetch`. Las modificaciones y desarrollos propios que realizamos fueron:
+Utilizamos la asistencia de Claude Pro / ChatGPT Plus directamente desde el navegador para apoyarnos en la estructura inicial. Las modificaciones manuales que nosotros programamos y afinamos en el editor web de GitHub fueron:
 - El manejo selectivo del código 404 para diferenciar *"sin resultados"* de un error de servidor.
 - La técnica de *debounce* para optimizar la red en el buscador.
 - La lógica de alternancia (*toggle*) y persistencia de favoritos sin duplicados.
 - Todo el reto del Modo Oscuro/Claro con variables CSS dinámicas y almacenamiento en `localStorage`.
 
 ### 6. ¿Cómo publicaron su aplicación mediante GitHub Pages? *(Especialidad: Yadier Pech / Yazir Balam)*
-Publicamos el repositorio público en GitHub con los 4 archivos en la raíz. Luego fuimos a **Settings > Pages**, seleccionamos la rama `main` en la carpeta `/ (root)` y guardamos. GitHub ejecutó un flujo de despliegue automatizado que sirvió los archivos estáticos bajo un certificado HTTPS en `https://Yazir-BF.github.io/proyecto-web-ia/`.
+Subimos los 4 archivos al repositorio público en GitHub. Luego fuimos a **Settings > Pages**, seleccionamos la rama `main` en la carpeta `/ (root)` y guardamos. GitHub ejecutó un flujo de despliegue automatizado que sirvió los archivos estáticos bajo un certificado HTTPS en `https://Yazir-BF.github.io/proyecto-web-ia/`.
 
 ---
 
@@ -144,7 +153,7 @@ Publicamos el repositorio público en GitHub con los 4 archivos en la raíz. Lue
 
 Para cumplir con el requisito de al menos **6 commits**, **2 Issues** y **1 Pull Request**:
 
-### Plan de Commits Recomendado:
+### Plan de Commits Registrado:
 1. `feat(html): crear estructura semantica de index.html y layout base` (Yadier Pech)
 2. `feat(css): agregar diseño visual responsive y estilos de tarjetas` (Iván Rodríguez)
 3. `feat(api): implementar conexion fetch a API y manejo de errores con try/catch` (Yazir Balam)
@@ -158,6 +167,5 @@ Para cumplir con el requisito de al menos **6 commits**, **2 Issues** y **1 Pull
 - **Issue #2:** *"Persistir la preferencia de Modo Oscuro del usuario entre recargas de página."* (Asignado a: Iván Rodríguez)
 
 ### Pull Request Recomendado:
-- Crear una rama secundaria llamada `feature/modo-oscuro`.
-- Realizar el commit del cambio de tema en dicha rama.
-- Abrir un **Pull Request** hacia `main` con el título: *"Agregar reto de Modo Oscuro / Claro con variables CSS y localStorage"*, revisarlo y fusionarlo (*merge*).
+- Rama secundaria: `feature/modo-oscuro`.
+- Título del Pull Request hacia `main`: *"Agregar reto de Modo Oscuro / Claro con variables CSS y localStorage"*.
